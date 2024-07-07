@@ -24,8 +24,8 @@ const Home = ({navigation}) => {
         {data && 
             data.map((item, index) => {
                 return (
-                   <TouchableOpacity onPress={() => navigation.navigate('isi', {iddoa: item.id})} key={item.id}>
-                        <Text key={index}>{item.doa}</Text>
+                   <TouchableOpacity style={styles.contentBody} onPress={() => navigation.navigate('isi', {iddoa: item.id})} key={item.id}>
+                        <Text key={index} style={styles.contentAyat}>{item.doa}</Text>
                    </TouchableOpacity>
                 )
             })}
@@ -50,4 +50,16 @@ const Home = ({navigation}) => {
 
 export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  contentBody: {
+    margin: 7,
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 5,
+  },
+  contentAyat: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    
+  },
+});

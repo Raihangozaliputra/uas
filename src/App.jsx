@@ -32,8 +32,8 @@ const BottomTabs = () => {
 const App = () => {
   
   return (
-    <NavigationContainer >
-      <stack.Navigator>
+    <NavigationContainer  style={styles.contentBody}>
+      <stack.Navigator >
         <stack.Screen name="BottomTabs" component={BottomTabs} options={{
           headerShown: false
         }}/>
@@ -45,4 +45,8 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  contentBody: {
+    margin: 100,
+  },
+});

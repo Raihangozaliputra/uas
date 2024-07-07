@@ -23,14 +23,14 @@ const Isi = ({route}) => {
   ambildata();
   }, []);
   return (
-    <View>
+    <View >  
       {data && 
             data.map((item, index) => {
                 return (
-                   <TouchableOpacity onPress={() => navigation.navigate('isi')} key={item.id}>
-                        <Text>{item.doa} </Text>
-                        <Text>{item.ayat} </Text>
-                        <Text>{item.latin} </Text>
+                   <TouchableOpacity onPress={() => navigation.navigate('isi')} key={item.id} >
+                        <Text style={styles.contentBody}>{item.doa} </Text>
+                        <Text style={styles.contentAyat}>{item.ayat} </Text>
+                        <Text style={styles.contentLatin}>{item.latin} </Text>
                         
                    </TouchableOpacity>
                 )
@@ -41,4 +41,23 @@ const Isi = ({route}) => {
 
 export default Isi
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  contentBody: {
+    margin: 20,
+    fontWeight: 'bold',
+    fontSize: 25,
+    backgroundColor: 'white',
+    padding: 12,
+    borderRadius: 5,
+  },
+  contentAyat: {
+    margin: 20,
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  contentLatin: {
+    margin: 20,
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+});
